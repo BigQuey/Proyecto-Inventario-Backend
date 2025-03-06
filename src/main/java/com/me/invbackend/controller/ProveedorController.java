@@ -1,6 +1,5 @@
 package com.me.invbackend.controller;
 
-import com.me.invbackend.model.entity.Producto;
 import com.me.invbackend.model.entity.Proveedor;
 import com.me.invbackend.service.IProveedorService;
 import org.springframework.beans.factory.annotation.Autowired;

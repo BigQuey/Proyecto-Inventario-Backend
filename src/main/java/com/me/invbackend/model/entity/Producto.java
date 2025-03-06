@@ -2,12 +2,11 @@ package com.me.invbackend.model.entity;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import jakarta.persistence.*;
-import lombok.Builder;
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.util.Date;
 
-@Builder
+
 @Entity
 @JsonInclude(JsonInclude.Include.ALWAYS)
 @Table(name = "producto")
@@ -26,7 +25,6 @@ public class Producto {
 //    @Temporal(TemporalType.TIMESTAMP)
     @CreationTimestamp
     @Column(name = "fecha_ingreso", updatable = false, insertable = false)
-    @Builder.Default
     private Date fecha_ingreso;
     @ManyToOne
     @JoinColumn(name = "proveedor_id", referencedColumnName = "id_proveedor", nullable = false)
